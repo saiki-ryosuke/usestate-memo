@@ -6,14 +6,14 @@ export const Form = () => {
     const getMemoContents = () => {
         let memoForm = document.getElementById("memo-form")
         setMemoContents([memoForm.value, ...memoContents])
-        memoForm.value = '';
+        memoForm.value = "";
     }
 
     const showMemoContents = () => {
         const historyArea = document.getElementById("history")
         while (historyArea.firstChild){
             historyArea.removeChild(historyArea.firstChild)
-        }            
+        }
 
         memoContents.forEach((memo) => {            
             const createdElement = document.createElement("p")
